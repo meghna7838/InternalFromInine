@@ -5,50 +5,26 @@ export default function App() {
     <div className="App">
       {/* Refactor the inline style to use the internal style. */}
       <form
-        style={{
-          width: "60%",
-          margin: "50px auto",
-          display: "flex",
-          flexDirection: "column",
-          gap: 20
-        }}
+        style={styles.form}
       >
         {/* Refactor the inline style to use the internal style. */}
-        <h3 style={{ fontSize: "2rem", letterSpacing: 2 }}>Sign Up</h3>
-        <input style={{ padding: 10 }} placeholder="Username" />
-        <input style={{ padding: 10 }} placeholder="Email" />
-        <input style={{ padding: 10 }} placeholder="Password" />
+        <h3 style={styles.h3style}>Sign Up</h3>
+        <input style={styles.paddingStyle} placeholder="Username" />
+        <input style={styles.paddingStyle} placeholder="Email" />
+        <input style={styles.paddingStyle} placeholder="Password" />
         {/* Refactor the inline style to use the internal style. */}
         <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            gap: 20
-          }}
+          style={styles.divstyle}
         >
           {/* Refactor the inline style to use the internal style. */}
           <button
-            style={{
-              outline: "none",
-              paddingBlock: 5,
-              width: 100,
-              backgroundColor: "red",
-              color: "white",
-              cursor: "pointer"
-            }}
+            style={styles.button1style}
           >
             Cancel
           </button>
           {/* Refactor the inline style to use the internal style. */}
           <button
-            style={{
-              outline: "none",
-              paddingBlock: 5,
-              width: 100,
-              backgroundColor: "red",
-              color: "white",
-              cursor: "pointer"
-            }}
+            style={styles.button1style}
           >
             Login
           </button>
@@ -56,4 +32,29 @@ export default function App() {
       </form>
     </div>
   );
+}
+
+const styles = {
+  form:{
+    width: "60%",
+    margin: "50px auto",
+    display: "flex",
+    flexDirection: "column",
+    gap: 20
+  },
+  h3style:{ fontSize: "2rem", letterSpacing: 2 },
+  paddingStyle:{ padding: 10 },
+  divstyle:{
+    display: "flex",
+    justifyContent: "center",
+    gap: 20
+  },
+  button1style:{
+    outline: "none",
+    paddingBlock: 5,
+    width: 100,
+    backgroundColor: "red",
+    color: "white",
+    cursor: "pointer"
+  }
 }
